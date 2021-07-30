@@ -3,9 +3,10 @@
   "version": "0.0.1",
   "description": "常用的工具类",
   "author": "内牛满面",
-  "main": "index.js",
-  "module": "index.js",
+  "main": "build/index.js",
+  "module": "build/index.js",
   "scripts": {
+    "build": "./node_modules/.bin/webpack --progress --config webpack.config.js",
     "login": "npm login --registry=http://172.16.8.10:8081/repository/hosted-npm/"
   },
   "license": "MIT",
@@ -20,6 +21,27 @@
   ],
   "publishConfig": {
     "registry": "http://172.16.8.10:8081/repository/hosted-npm/"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.13.10",
+    "@babel/core": "^7.13.10",
+    "@babel/plugin-transform-runtime": "^7.13.10",
+    "@babel/polyfill": "^7.12.1",
+    "@babel/preset-env": "^7.13.10",
+    "@babel/preset-react": "^7.12.13",
+    "babel-loader": "^8.2.2",
+    "clean-webpack-plugin": "^4.0.0-alpha.0",
+    "copy-webpack-plugin": "^8.0.0",
+    "css-loader": "^5.1.3",
+    "eslint-config-zerod": "^1.0.0",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.3.1",
+    "react-hot-loader": "^4.13.0",
+    "style-loader": "^2.0.0",
+    "url-loader": "^4.1.1",
+    "webpack": "^5.27.1",
+    "webpack-cli": "^4.5.0",
+    "webpack-dev-server": "^3.11.2"
   },
   "dependencies": {
     "ua-device": "^0.1.10"
